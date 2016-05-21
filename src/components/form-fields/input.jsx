@@ -4,17 +4,20 @@ import classNames from 'classnames';
 class Input extends React.Component {
   render() {
     const props = this.props;
+    const screwA11Y = props.screwA11Y;
     const type = props.type ? props.type : 'text';
     const name = props.name;
     const id = props.id;
     const placeholder = props.placeholder;
-    const required = props.required;
+    const required = screwA11Y ? '' : props.required;
     const className = classNames(props.className, 'input-field');
     const wrapperClassName = props.wrapperClassName;
 
     return (
       <div className={wrapperClassName}>
-        <label htmlFor={id} className="clipped">{placeholder}</label>
+        {
+          screwA11Y ? '' : <label htmlFor={id} className="clipped">{placeholder}</label>
+        }
         <input name={name} id={id} type={type} placeholder={placeholder} className={className} required={required}/>
       </div>
     );
