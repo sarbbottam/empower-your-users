@@ -1,0 +1,46 @@
+/* sheer variables */
+@import '../../node_modules/sheer/src/css/variables/variables.css';
+
+/* sheer mixins */
+@import '../../node_modules/sheer/src/css/mixins/mixins.css';
+
+/*
+ * placeholder for app variables
+ * @import 'variables/variables.css';
+ */
+
+@import '../../node_modules/sheer/src/css/modules/standardize.css';
+
+@import '../../node_modules/sheer/src/css/modules/grid-core.css';
+
+/* sheer modules
+ * remove and add as required
+ * look at ../../node_modules/sheer/src/css/modules/ for the list of available modules */
+@import '../../node_modules/sheer/src/css/modules/grid.css';
+@import '../../node_modules/sheer/src/css/modules/input-field.css';
+@import '../../node_modules/sheer/src/css/modules/button.css';
+@import '../../node_modules/sheer/src/css/modules/drop-down.css';
+
+@import '../../node_modules/sheer/src/css/modules/link.css';
+
+@import '../../node_modules/sheer/src/css/modules/error-message.css';
+@import '../../node_modules/sheer/src/css/modules/equal-spaced.css';
+
+@import '../../node_modules/sheer/src/css/modules/capsule.css';
+@import '../../node_modules/sheer/src/css/modules/card.css';
+
+@import '../../node_modules/sheer/src/css/modules/modal.css';
+
+@import '../../node_modules/sheer/src/css/sheer/sheer.css';
+
+@import 'modules/form.css';
+@import 'modules/layout.css';
+@import 'modules/sheer.css';
+@import 'modules/granular.css';
+
+/*
+ * order matters; granular rules overrides predefined rules,
+ * thus granular rules need to be loaded at the last
+ */
+@import '../../node_modules/sheer/src/css/modules/text.css';
+@import '../../node_modules/sheer/src/css/modules/granular.css';

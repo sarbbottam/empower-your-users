@@ -1,0 +1,52 @@
+.container {
+  margin: 0 auto;
+  padding: 28px 0 40px;
+  width: 500px;
+}
+
+.heading,
+.sub-heading {
+  margin: 20px 0 10px;
+}
+
+.sub-heading {
+  border-bottom: 1px solid var(--gray);
+  padding-bottom: 4px;
+}
+
+.row-input {
+  margin-bottom: 8px;
+}
+
+.row-button {
+  margin-top: 20px;
+}
+
+/* small device */
+@media screen and (--sm-device) {
+  .container {
+    width: 300px;
+  }
+}
+
+/*!
+ * placeholder for large device specific layout rules
+ * @media screen and (--md-device) {
+ *   ...
+ * }
+ */
+
+
+/*!
+ * placeholder for large device specific layout rules
+ * @media screen and (--lg-device) {
+ *   ...
+ * }
+ */
+
+/*!
+ * placeholder for extra large device specific layout rules
+ * @media screen and (--xl-device) {
+ *   ...
+ * }
+ */
