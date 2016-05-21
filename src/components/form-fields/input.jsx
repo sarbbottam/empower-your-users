@@ -5,6 +5,7 @@ class Input extends React.Component {
   render() {
     const props = this.props;
     const type = props.type ? props.type : 'text';
+    const name = props.name;
     const id = props.id;
     const placeholder = props.placeholder;
     const required = props.required;
@@ -14,7 +15,7 @@ class Input extends React.Component {
     return (
       <div className={wrapperClassName}>
         <label htmlFor={id} className="clipped">{placeholder}</label>
-        <input id={id} type={type} placeholder={placeholder} className={className} required={required}/>
+        <input name={name} id={id} type={type} placeholder={placeholder} className={className} required={required}/>
       </div>
     );
   }
@@ -22,6 +23,7 @@ class Input extends React.Component {
 
 Input.propTypes = {
   type: React.PropTypes.string,
+  name: React.PropTypes.string.isRequired,
   id: React.PropTypes.string.isRequired,
   placeholder: React.PropTypes.string.isRequired,
   required: React.PropTypes.bool,
