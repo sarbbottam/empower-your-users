@@ -1,11 +1,7 @@
 import React from 'react';
+import states from '../model/states';
 import Input from './form-fields/input';
-
-// <div className="row-input">
-//   <select aria-label="State" title="State" className="drop-down w-a">
-
-//   </select>
-// </div>
+import Select from './form-fields/select';
 
 export default class FormAccessible extends React.Component {
   render() {
@@ -23,6 +19,7 @@ export default class FormAccessible extends React.Component {
           <Input wrapperClassName="row-input" id="address-line-1" placeholder="Address line 1" required/>
           <Input wrapperClassName="row-input" id="address-line-2" placeholder="Address line 2" required/>
           <Input wrapperClassName="row-input" id="city" placeholder="City" className="w-a" required/>
+          <Select wrapperClassName="row-input" id="state" label="State" className="w-a" required options={states}/>
           <Input wrapperClassName="row-input" id="postal-code" placeholder="Postal code" className="w-a" required/>
         </fieldset>
         <input type="checkbox" id="tos" required/> <label htmlFor="tos">I agree to the terms and condition </label>
