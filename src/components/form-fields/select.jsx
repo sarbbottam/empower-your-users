@@ -9,9 +9,14 @@ class Input extends React.Component {
     const name = props.name;
     const id = props.id;
     const label = props.label;
-    const required = screwA11Y ? '' : props.required;
     const className = classNames(props.className, 'drop-down');
-    const wrapperClassName = props.wrapperClassName;
+
+    let wrapperClassName = props.wrapperClassName;
+    let required = props.required;
+    if (required) {
+      wrapperClassName = classNames(wrapperClassName, 'required');
+    }
+    required = screwA11Y ? '' : required;
 
     return (
       <div className={wrapperClassName}>

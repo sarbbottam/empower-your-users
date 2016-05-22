@@ -1,4 +1,6 @@
-fieldset,
-legend {
-  margin-bottom: 8px;
+.required:before {
+  content: '*';
+  position: absolute;
+  color: red;
+  font-size: 20px;
 }
