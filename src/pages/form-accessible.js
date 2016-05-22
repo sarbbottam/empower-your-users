@@ -8,7 +8,7 @@ import FormAccessible from '../components/form-accessible';
 export default () => {
   return ReactDOMServer.renderToStaticMarkup(
     <Base>
-      <Layout>
+      <Layout heading="Form - Accessible">
         <FormAccessible/>
       </Layout>
     </Base>

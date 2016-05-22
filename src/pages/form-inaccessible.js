@@ -8,7 +8,7 @@ import FormInaccessible from '../components/form-inaccessible';
 export default () => {
   return ReactDOMServer.renderToStaticMarkup(
     <Base>
-      <Layout>
+      <Layout heading="Form - Inaccessible">
         <FormInaccessible/>
       </Layout>
     </Base>
