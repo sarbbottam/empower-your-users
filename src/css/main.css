@@ -4,10 +4,7 @@
 /* sheer mixins */
 @import '../../node_modules/sheer/src/css/mixins/mixins.css';
 
-/*
- * placeholder for app variables
- * @import 'variables/variables.css';
- */
+@import 'variables/variables.css';
 
 @import '../../node_modules/sheer/src/css/modules/standardize.css';
 
@@ -35,8 +32,10 @@
 
 @import 'modules/form.css';
 @import 'modules/layout.css';
+@import 'modules/table.css';
 @import 'modules/sheer.css';
 @import 'modules/granular.css';
+
 
 /*
  * order matters; granular rules overrides predefined rules,

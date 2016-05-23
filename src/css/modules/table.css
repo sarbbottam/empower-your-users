@@ -1,0 +1,25 @@
+table {
+  border: 1px solid var(--gray);
+  margin-top: 10px;
+  width: 100%;
+}
+
+tr:first-child {
+  background-color: var(--gray);
+  font-weight: 500;
+}
+
+thead + tbody > tr:first-child {
+  background-color: inherit;
+  font-weight: inherit;
+}
+
+th:not(:last-child),
+td:not(:last-child) {
+  border-right: 1px solid var(--gray);
+}
+
+th,
+td {
+  padding: 10px;
+}
