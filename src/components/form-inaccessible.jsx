@@ -28,7 +28,7 @@ export default class FormAccessible extends React.Component {
             <Input screwA11Y name="postalCode" wrapperClassName="col" id="postal-code" placeholder="Postal code" className="w-a" required/>
           </div>
         </fieldset>
-        <input name="tos" type="checkbox" id="tos" required/> I agree to the terms and condition
+        <input name="tos" type="checkbox" id="tos"/> I agree to the terms and condition
         <div className="row-button">
           <button type="submit" className="button button-primary">Submit</button>
         </div>
