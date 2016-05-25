@@ -18,6 +18,7 @@ class Base extends React.Component {
           <footer className="text-sm p-f footer">
             Developed with ♡ and <a href="https://github.com/sarbbottam/sheer" className="link">Sheer</a>
           </footer>
+          <script src={this.props.js}></script>
         </body>
       </html>
     );
@@ -27,7 +28,8 @@ class Base extends React.Component {
 Base.propTypes = {
   lang: React.PropTypes.string,
   title: React.PropTypes.string,
-  children: React.PropTypes.object
+  children: React.PropTypes.object,
+  js: React.PropTypes.string
 };
 
 export default Base;
