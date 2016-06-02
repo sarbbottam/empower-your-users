@@ -1,0 +1,8 @@
+.card:focus {
+  outline: none;
+}
+
+.card-accessible:focus,
+.card:hover {
+  box-shadow: 2px 2px 2px #444, -2px 2px 2px #444;
+}
