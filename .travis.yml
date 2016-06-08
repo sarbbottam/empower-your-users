@@ -1,0 +1,23 @@
+language: node_js
+cache:
+  directories:
+  - node_modules
+notifications:
+  email: false
+node_js:
+- stable
+before_install:
+- npm i -g npm@^3.0.0
+before_script:
+- npm prune
+script:
+- npm test
+- npm run build
+after_success:
+- npm run gh-pages
+branches:
+- only - master
+env:
+  global:
+  - GH_REF: github.com/sarbbottam/empower-your-users
+  - secure: fhnPvp8mj0e3306BIypF//OfHF0rS0IEkJ6vAqbiyoUvzHz8KmD6sLuYqr/jdKOTqsd088fcE+hl72OXkTtqowSPY4IW/BxHnxNIs3kFunhqFbZsdZIjj/2GcQBJDXdS5KBtu3Lj55i3q8lOr6kZ+Qw0+kEA4BC0RiQrhaJ/3MuZNj93kSPn3pqbNEp5qeOk/K4ksiHGgyC7ZVpnZY4s8gVOaeMxjV7Sl0pVRmyOnJkg8hcIBEn1bzF7h64EUuLKsOHuOzszfhyWl11LCYX48JXrMN5/M7dc78DG0npaL8UI5lLlcaTdSHYgQAtTh5h0iza+0l5zfdTaUfrvGFtIqkEyh/Imi3RmGdkmSxpo/QcPRtcs8ooSi381k/tUUNGPKDDR61mcn0CitdmuGHoPDIdhhiQRa52iaFb8+65VDn2s+dZz+zc1wkAMhzEtYGqbREWW6LcW5uu1pTD3AJQH1cmlr82+01ZQXGx5fj231PBYEmXf70eMeDwNC5GB3tt5jCG2FfkI04S/KZda/39hPJ4w1fBgVn3yi5xs8AbYWQtlKt+DYo+l1T/H0hcA/8ez3h+iRCnVGTd1KVc3Mi+kO0V+rseWNwPzpcw/4d2xcPD6KjFc7F67K7n913xr6e5u7b5Pj4pesKTirMDl5yUZP5+cyV1m6Vx2gI95Ica9SVk=

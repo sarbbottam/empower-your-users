@@ -14,7 +14,8 @@
     "cssnano:rtl": "cssnano dist/css/rtl.css dist/css/rtl.min.css --discardComments.removeAll",
     "build:css": "npm-run-all -s postcss rtlcss cssnano:*",
     "build:js": "shx cp -rf src/js dist/js",
-    "build": "npm-run-all -s setup -p build:*"
+    "build": "npm-run-all -s setup -p build:*",
+    "gh-pages": "./scripts/gh-pages.sh"
   },
   "keywords": [
     "Sheer",
