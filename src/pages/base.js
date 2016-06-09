@@ -14,7 +14,7 @@ export default config => {
   return ReactDOMServer.renderToStaticMarkup(
     <Base js={js}>
       <Layout heading={heading}>
-        <Component/>
+        <Component data={config.data}/>
       </Layout>
     </Base>
   );
