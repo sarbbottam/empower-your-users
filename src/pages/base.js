@@ -9,7 +9,7 @@ export default config => {
   const heading = config.component.split('-').map(word => {
     return word.charAt(0).toUpperCase() + word.substr(1).toLowerCase();
   }).join(' - ');
-  const js = `js/${config.js}`;
+  const js = config.js ? `js/${config.js}` : '';
 
   return ReactDOMServer.renderToStaticMarkup(
     <Base js={js}>

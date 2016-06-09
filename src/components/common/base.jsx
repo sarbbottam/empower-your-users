@@ -3,22 +3,30 @@ import React from 'react';
 class Base extends React.Component {
 
   render() {
+    const props = this.props;
+    const lang = props.lang;
+    const title = props.title;
+    const children = props.children;
+    const js = props.js;
+
     return (
-      <html lang={this.props.lang}>
+      <html lang={lang}>
         <head>
           <meta charSet="utf-8"/>
           <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
           <meta name="description" content=""/>
           <meta name="viewport" content="width=device-width, initial-scale=1"/>
-          <title>{this.props.title}</title>
+          <title>{title}</title>
           <link rel="stylesheet" type="text/css" href="css/ltr.css"/>
         </head>
         <body>
-          {this.props.children}
+          {children}
           <footer className="text-sm p-f footer">
             Developed with ♡ and <a href="https://github.com/sarbbottam/sheer" className="link">Sheer</a>
           </footer>
-          <script src={this.props.js}></script>
+          {
+            js ? <script src={js}></script> : null
+          }
         </body>
       </html>
     );
