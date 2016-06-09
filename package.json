@@ -3,10 +3,11 @@
   "version": "0.0.0",
   "description": "demo for empower-your-users presentation",
   "scripts": {
+    "test": "xo",
     "clean:dir": "shx rm -rf dist",
     "create:dir": "shx mkdir -p dist/css",
     "setup": "npm-run-all *:dir",
-    "prebuild:html": "xo",
+    "prebuild:html": "npm test",
     "build:html": "babel-node ./scripts/build",
     "postcss": "postcss -c config/postcss.json",
     "rtlcss": "rtlcss ./dist/css/ltr.css ./dist/css/rtl.css",
