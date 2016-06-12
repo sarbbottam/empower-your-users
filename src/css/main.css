@@ -30,6 +30,7 @@
 
 @import '../../node_modules/sheer/src/css/sheer/sheer.css';
 
+@import 'modules/standardize.css';
 @import 'modules/form.css';
 @import 'modules/layout.css';
 @import 'modules/table.css';
