@@ -1,10 +1,10 @@
 import fs from 'fs';
 import path from 'path';
 import {html as beautify} from 'js-beautify';
-import pages from './pages.js';
+import pages from '../src/pages/';
 
 const DIST_DIR = 'dist';
-const BASE = '../src/pages/base.js';
+const BASE = '../src/pages/server.js';
 
 if (!fs.existsSync(DIST_DIR)) {
   fs.mkdirSync(DIST_DIR);
