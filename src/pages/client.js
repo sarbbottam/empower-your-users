@@ -67,7 +67,7 @@ class App extends React.Component {
     }).join(' - ');
 
     return (
-      <Layout heading={heading}>
+      <Layout heading={heading} isIndex={this.state.component === 'index'}>
         <Component data={this.state.data} updateState={this.updateState}/>
       </Layout>
     );
