@@ -20,13 +20,16 @@ class Base extends React.Component {
           <link rel="stylesheet" type="text/css" href="css/ltr.css"/>
         </head>
         <body>
-          {children}
+          <div id="app">
+            {children}
+          </div>
           <footer className="text-sm p-f footer">
             Developed with ♡ and <a href="https://github.com/sarbbottam/sheer" className="link">Sheer</a>
           </footer>
           {
             js ? <script src={js}></script> : null
           }
+          <script src="js/client.js"></script>
         </body>
       </html>
     );

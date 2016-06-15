@@ -1,7 +1,7 @@
 import React from 'react';
 import states from '../model/states';
-import Input from './form-fields/input';
-import Select from './form-fields/select';
+import Input from './form-fields/input.jsx';
+import Select from './form-fields/select.jsx';
 
 export default class FormAccessible extends React.Component {
   render() {
