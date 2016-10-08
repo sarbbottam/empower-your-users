@@ -1,15 +1,17 @@
 import React from 'react';
 
-export default class TableInaccessible extends React.Component {
-  render() {
-    return (
-      <table>
+const Accessible = () => {
+  return (
+    <table>
+      <thead>
         <tr>
-          <td>Fruit</td>
-          <td>Quantity</td>
-          <td>Rate</td>
-          <td>Total</td>
+          <th>Fruit</th>
+          <th>Quantity</th>
+          <th>Rate</th>
+          <th>Total</th>
         </tr>
+      </thead>
+      <tbody>
         <tr>
           <td>apple</td>
           <td>3</td>
@@ -28,7 +30,9 @@ export default class TableInaccessible extends React.Component {
           <td>15</td>
           <td>75</td>
         </tr>
-      </table>
-    );
-  }
+      </tbody>
+    </table>
+  );
 }
+
+export default Accessible;

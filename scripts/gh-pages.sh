@@ -3,7 +3,7 @@
 rm -rf dist || exit 0;
 if [ "$TRAVIS_BRANCH" = "master" ] && [ "$TRAVIS_PULL_REQUEST" = "false" ]; then
   npm run build;
-  ( cd dist
+  ( cd build
     git init
     git config user.name "sarbbottam"
     git config user.email "sarbbottam@gmail.com"

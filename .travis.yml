@@ -15,7 +15,8 @@ script:
 after_success:
 - npm run gh-pages
 branches:
-- only - master
+  only:
+  - master
 env:
   global:
   - GH_REF: github.com/sarbbottam/empower-your-users
