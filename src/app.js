@@ -16,28 +16,28 @@ const App = () => (
       <div className="row m-t-20px">
         <div className="col col-1-4 col-sm-1-2 v-a-t">
           <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/button-accessible">Button Accessible</Link></li>
-            <li><Link to="/button-inaccessible">Button Inaccessible</Link></li>
-            <li><Link to="/form-accessible">Form Accessible</Link></li>
-            <li><Link to="/form-inaccessible">Form Inaccessible</Link></li>
-            <li><Link to="/image-accessible">Image Accessible</Link></li>
-            <li><Link to="/image-inaccessible">Image Inaccessible</Link></li>
-            <li><Link to="/table-accessible">Table Accessible</Link></li>
-            <li><Link to="/table-inaccessible">Table Inaccessible</Link></li>
-            <li><Link to="/table-layout">Table Layout</Link></li>
+            <li><Link to="/empower-your-users/">Home</Link></li>
+            <li><Link to="/empower-your-users/button-accessible">Button Accessible</Link></li>
+            <li><Link to="/empower-your-users/button-inaccessible">Button Inaccessible</Link></li>
+            <li><Link to="/empower-your-users/form-accessible">Form Accessible</Link></li>
+            <li><Link to="/empower-your-users/form-inaccessible">Form Inaccessible</Link></li>
+            <li><Link to="/empower-your-users/image-accessible">Image Accessible</Link></li>
+            <li><Link to="/empower-your-users/image-inaccessible">Image Inaccessible</Link></li>
+            <li><Link to="/empower-your-users/table-accessible">Table Accessible</Link></li>
+            <li><Link to="/empower-your-users/table-inaccessible">Table Inaccessible</Link></li>
+            <li><Link to="/empower-your-users/table-layout">Table Layout</Link></li>
           </ul>
         </div>
         <div className="col col-3-4 col-sm-1-2 v-a-t container-example">
-          <Match pattern="/button-accessible" component={ButtonAccessible} />
-          <Match pattern="/button-inaccessible" component={ButtonInaccessible} />
-          <Match pattern="/form-accessible" component={FormAccessible} />
-          <Match pattern="/form-inaccessible" component={FormInaccessible} />
-          <Match pattern="/image-accessible" component={ImageAccessible} />
-          <Match pattern="/image-inaccessible" component={ImageInaccessible} />
-          <Match pattern="/table-accessible" component={TableAccessible} />
-          <Match pattern="/table-inaccessible" component={TableInaccessible} />
-          <Match pattern="/table-layout" component={TableLayout} />
+          <Match pattern="/empower-your-users/button-accessible" component={ButtonAccessible} />
+          <Match pattern="/empower-your-users/button-inaccessible" component={ButtonInaccessible} />
+          <Match pattern="/empower-your-users/form-accessible" component={FormAccessible} />
+          <Match pattern="/empower-your-users/form-inaccessible" component={FormInaccessible} />
+          <Match pattern="/empower-your-users/image-accessible" component={ImageAccessible} />
+          <Match pattern="/empower-your-users/image-inaccessible" component={ImageInaccessible} />
+          <Match pattern="/empower-your-users/table-accessible" component={TableAccessible} />
+          <Match pattern="/empower-your-users/table-inaccessible" component={TableInaccessible} />
+          <Match pattern="/empower-your-users/table-layout" component={TableLayout} />
         </div>
       </div>
     </div>
