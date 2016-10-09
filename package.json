@@ -1,19 +1,21 @@
 {
   "name": "empower-your-users",
-  "homepage": "http://sarbbottam.github.io/empower-your-users",
   "version": "0.1.0",
+  "description": "demo for empower-your-users presentation",
   "private": true,
-  "dependencies": {
-    "react": "^15.3.2",
-    "react-dom": "^15.3.2",
-    "react-router": "^4.0.0-alpha.3"
+  "author": "Sarbbottam Bandyopadhyay <sarbbottam@gmail.com> (https://sarbbottam.github.io/)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sarbbottam/empower-your-users"
   },
+  "bugs": {
+    "url": "https://github.com/sarbbottam/empower-your-users/issues"
+  },
+  "homepage": "https://github.com/sarbbottam/empower-your-users",
   "devDependencies": {
     "autoprefixer": "^6.3.3",
     "classnames": "^2.2.5",
-    "cssnano-cli": "^1.0.3",
-    "gh-pages": "^0.11.0",
-    "npm-run-all": "^3.1.0",
     "postcss": "^5.0.19",
     "postcss-calc": "^5.2.0",
     "postcss-cli": "^2.5.1",
@@ -27,9 +29,9 @@
     "postcss-nested": "^1.0.0",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
+    "react-router": "^4.0.0-alpha.3",
     "react-scripts": "0.6.1",
-    "sheer": "0.0.15",
-    "shx": "^0.1.2"
+    "sheer": "0.0.15"
   },
   "scripts": {
     "postcss": "postcss -c config/postcss.json",
