@@ -12,7 +12,7 @@
   "bugs": {
     "url": "https://github.com/sarbbottam/empower-your-users/issues"
   },
-  "homepage": "https://github.com/sarbbottam/empower-your-users",
+  "homepage": "https://sarbbottam.githug.io/empower-your-users",
   "devDependencies": {
     "autoprefixer": "^6.3.3",
     "classnames": "^2.2.5",
