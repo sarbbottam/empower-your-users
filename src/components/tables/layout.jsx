@@ -1,4 +1,4 @@
-import React from 'react';
+const React = require('react');
 
 const Layout = () => {
   return (
@@ -21,4 +21,4 @@ const Layout = () => {
   );
 }
 
-export default Layout;
+module.exports = Layout;

@@ -1,32 +1,29 @@
-import React from 'react';
-import classNames from 'classnames';
+const React = require('react');
+const classNames = require('classnames');
 
-class Input extends React.Component {
-  render() {
-    const props = this.props;
-    const screwA11Y = props.screwA11Y;
-    const type = props.type ? props.type : 'text';
-    const name = props.name;
-    const id = props.id;
-    const placeholder = props.placeholder;
-    const className = classNames(props.className, 'input-field');
+const Input = (props) => {
+  const screwA11Y = props.screwA11Y;
+  const type = props.type ? props.type : 'text';
+  const name = props.name;
+  const id = props.id;
+  const placeholder = props.placeholder;
+  const className = classNames(props.className, 'input-field');
 
-    let wrapperClassName = props.wrapperClassName;
-    let required = props.required;
-    if (required) {
-      wrapperClassName = classNames(wrapperClassName, 'required');
-    }
-    required = screwA11Y ? '' : required;
-
-    return (
-      <div className={wrapperClassName}>
-        {
-          screwA11Y ? '' : <label htmlFor={id} className="clipped">{placeholder}</label>
-        }
-        <input name={name} id={id} type={type} placeholder={placeholder} className={className} required={required}/>
-      </div>
-    );
+  let wrapperClassName = props.wrapperClassName;
+  let required = props.required;
+  if (required) {
+    wrapperClassName = classNames(wrapperClassName, 'required');
   }
+  required = screwA11Y ? '' : required;
+
+  return (
+    <div className={wrapperClassName}>
+      {
+        screwA11Y ? '' : <label htmlFor={id} className="clipped">{placeholder}</label>
+      }
+      <input name={name} id={id} type={type} placeholder={placeholder} className={className} required={required}/>
+    </div>
+  );
 }
 
 Input.propTypes = {
@@ -39,4 +36,4 @@ Input.propTypes = {
   wrapperClassName: React.PropTypes.string
 };
 
-export default Input;
+module.exports = Input;

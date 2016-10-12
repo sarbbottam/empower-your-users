@@ -1,4 +1,4 @@
-import React from 'react';
+const React = require('react');
 
 const Accessible = () => {
   return (
@@ -25,4 +25,4 @@ const Accessible = () => {
   );
 }
 
-export default Accessible;
+module.exports = Accessible;

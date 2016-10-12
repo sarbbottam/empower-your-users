@@ -1,9 +1,9 @@
-import {Accessible as ButtonAccessible, Inaccessible as ButtonInaccessible} from '../components/buttons';
-import {Accessible as FormAccessible, Inaccessible as FormInaccessible} from '../components/forms';
-import {Accessible as ImageAccessible, Inaccessible as ImageInaccessible} from '../components/images';
-import {Accessible as TableAccessible, Inaccessible as TableInaccessible, Layout as TableLayout} from '../components/tables';
+const {Accessible: ButtonAccessible, Inaccessible: ButtonInaccessible} = require('../components/buttons');
+const {Accessible: FormAccessible, Inaccessible: FormInaccessible} = require('../components/forms');
+const {Accessible: ImageAccessible, Inaccessible: ImageInaccessible} = require('../components/images');
+const {Accessible: TableAccessible, Inaccessible: TableInaccessible, Layout: TableLayout} = require('../components/tables');
 
-export default {
+module.exports = {
   'button-accessible': {
     component: ButtonAccessible,
     text: 'Accessible Button'

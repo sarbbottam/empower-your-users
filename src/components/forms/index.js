@@ -1,7 +1,7 @@
-import Accessible from './accessible';
-import Inaccessible from './inaccessible';
+const Accessible = require('./accessible');
+const Inaccessible = require('./inaccessible');
 
-export {
+module.exports = {
   Accessible,
   Inaccessible
 }

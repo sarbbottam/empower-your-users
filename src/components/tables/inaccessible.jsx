@@ -1,4 +1,4 @@
-import React from 'react';
+const React = require('react');
 
 const Inaccessible = () => {
   return (
@@ -31,4 +31,4 @@ const Inaccessible = () => {
   );
 }
 
-export default Inaccessible;
+module.exports = Inaccessible;

@@ -1,10 +1,10 @@
-import React from 'react';
+const React = require('react');
 
-import Router from 'react-router/BrowserRouter';
-import Match from 'react-router/Match';
-import Link from 'react-router/Link';
+const Router = require('react-router').BrowserRouter;
+const Match = require('react-router').Match;
+const Link = require('react-router').Link;
 
-import pages from './pages'
+const pages = require('./pages');
 
 const pathPrefix = '/empower-your-users';
 
@@ -18,7 +18,7 @@ const App = () => (
             <li><Link to={`${pathPrefix}/`}>Home</Link></li>
             {
               Object.keys(pages).map(pageKey => {
-                return <li><Link to={`${pathPrefix}/${pageKey}.html`}>{pages[pageKey].text}</Link></li>
+                return <li key={pageKey}><Link to={`${pathPrefix}/${pageKey}.html`}>{pages[pageKey].text}</Link></li>
               })
             }
           </ul>
@@ -26,7 +26,7 @@ const App = () => (
         <div className="col col-3-4 col-sm-1-2 v-a-t container-example">
           {
             Object.keys(pages).map(pageKey => {
-              return <Match pattern={`${pathPrefix}/${pageKey}.html`} component={pages[pageKey].component} />
+              return <Match key={pageKey} pattern={`${pathPrefix}/${pageKey}.html`} component={pages[pageKey].component} />
             })
           }
         </div>
@@ -35,4 +35,4 @@ const App = () => (
   </Router>
 )
 
-export default App;
+module.exports = App;

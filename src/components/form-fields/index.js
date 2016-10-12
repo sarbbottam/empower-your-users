@@ -1,7 +1,7 @@
-import Input from './input';
-import Select from './select';
+const Input = require('./input');
+const Select = require('./select');
 
-export {
+module.exports = {
   Input,
   Select
 }
