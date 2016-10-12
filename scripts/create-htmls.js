@@ -1,11 +1,11 @@
 const fs = require('fs');
 const path = require('path');
 
-const pages = require('../config/pages');
+const pages = require('../src/pages');
 const dir = path.resolve(process.cwd(), 'build');
 const encoding = 'utf8';
 
-pages.forEach(page => {
+Object.keys(pages).forEach(page => {
   fs.readFile(path.resolve(dir, 'index.html'), encoding, (error, data) => {
     if (error) {
       return;
