@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   {value: 'AL', text: 'Alabama'},
   {value: 'AK', text: 'Alaska'},
   {value: 'AZ', text: 'Arizona'},

@@ -1,5 +1,5 @@
-const React = require('react');
-const classNames = require('classnames');
+import React from 'react';
+import classNames from 'classnames';
 
 const Select = (props) => {
   const screwA11Y = props.screwA11Y;
@@ -42,4 +42,4 @@ Select.propTypes = {
   wrapperClassName: React.PropTypes.string
 };
 
-module.exports = Select;
+export default Select;

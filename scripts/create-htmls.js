@@ -1,7 +1,7 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
-const pages = require('../src/pages');
+import pages from '../src/pages';
 const dir = path.resolve(process.cwd(), 'build');
 const encoding = 'utf8';
 

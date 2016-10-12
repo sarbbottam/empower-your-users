@@ -1,5 +1,5 @@
-const React = require('react');
-const classNames = require('classnames');
+import React from 'react';
+import classNames from 'classnames';
 
 const Input = (props) => {
   const screwA11Y = props.screwA11Y;
@@ -36,4 +36,4 @@ Input.propTypes = {
   wrapperClassName: React.PropTypes.string
 };
 
-module.exports = Input;
+export default Input;

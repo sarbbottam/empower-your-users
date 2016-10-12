@@ -1,4 +1,4 @@
-const React = require('react');
+import React from 'react';
 
 const Inaccessible = () => {
   function surprise() {
@@ -43,4 +43,4 @@ const Inaccessible = () => {
   );
 }
 
-module.exports = Inaccessible;
+export default Inaccessible

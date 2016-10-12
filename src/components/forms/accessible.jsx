@@ -1,6 +1,6 @@
-const React = require('react');
-const states = require( '../../model/states');
-const {Input, Select} = require('../form-fields');
+import React from 'react';
+import states from '../../model/states';
+import {Input, Select} from '../form-fields';
 
 const Accessible = () => {
   return (
@@ -34,4 +34,4 @@ const Accessible = () => {
   );
 }
 
-module.exports = Accessible;
+export default Accessible;

@@ -1,10 +1,10 @@
-const React = require('react');
+import React from 'react';
 
-const Router = require('react-router').BrowserRouter;
-const Match = require('react-router').Match;
-const Link = require('react-router').Link;
+import Router from 'react-router/BrowserRouter';
+import Match from 'react-router/Match';
+import Link from 'react-router/Link';
 
-const pages = require('./pages');
+import pages from './pages'
 
 const pathPrefix = '/empower-your-users';
 
@@ -35,4 +35,4 @@ const App = () => (
   </Router>
 )
 
-module.exports = App;
+export default App;

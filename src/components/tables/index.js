@@ -1,8 +1,8 @@
-const Accessible = require('./accessible');
-const Inaccessible = require('./inaccessible');
-const Layout = require('./layout');
+import Accessible from './accessible';
+import Inaccessible from './inaccessible';
+import Layout from './layout';
 
-module.exports = {
+export {
   Accessible,
   Inaccessible,
   Layout
