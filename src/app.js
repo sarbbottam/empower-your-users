@@ -1,15 +1,9 @@
-import url from 'url';
 import React from 'react';
 
 import Match from 'react-router/Match';
 import Link from 'react-router/Link';
 
-import pages from './pages';
-
-import pkg from '../package.json';
-const pathname = url.parse(pkg.homepage).pathname;
-
-const pathPrefix = `${pathname}/`;
+import { basePath, pages } from './routes';
 
 const App = () => (
   <div className="container">
@@ -17,18 +11,20 @@ const App = () => (
     <div className="row m-t-20px">
       <div className="col col-1-4 col-sm-1-2 v-a-t">
         <ul>
-          <li><Link to={`${pathPrefix}`}>Home</Link></li>
           {
-            Object.keys(pages).map(pageKey => {
-              return <li key={pageKey}><Link to={`${pathPrefix}${pageKey}.html`}>{pages[pageKey].text}</Link></li>
+            pages.map(page => {
+              return <li key={page.relativePath}><Link to={`${basePath}${page.relativePath}`}>{page.text}</Link></li>
             })
           }
         </ul>
       </div>
       <div className="col col-3-4 col-sm-1-2 v-a-t container-example">
         {
-          Object.keys(pages).map(pageKey => {
-            return <Match key={pageKey} pattern={`${pathPrefix}${pageKey}.html`} component={pages[pageKey].component} />
+          pages.map(page => {
+            if (page.component) {
+              return <Match key={page.relativePath} pattern={`${basePath}${page.relativePath}`} component={page.component} />
+            }
+            return '';
           })
         }
       </div>
