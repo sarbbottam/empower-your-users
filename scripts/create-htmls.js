@@ -11,7 +11,7 @@ import pages from '../src/pages';
 
 const dir = path.resolve(process.cwd(), 'build');
 const encoding = 'utf8';
-const pathPrefix = '/empower-your-users';
+const pathPrefix = '/empower-your-users/';
 
 const html = fs.readFileSync(path.resolve(dir, 'index.html'), encoding);
 
@@ -19,7 +19,7 @@ function createHTML (page) {
   const context = createServerRenderContext();
     const markup = renderToString(
       <ServerRouter
-        location={`${pathPrefix}/${page}.html`}
+        location={`${pathPrefix}${page}.html`}
         context={context}
       >
         <App/>
