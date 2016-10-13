@@ -1,3 +1,4 @@
+import url from 'url';
 import React from 'react';
 
 import Match from 'react-router/Match';
@@ -5,7 +6,10 @@ import Link from 'react-router/Link';
 
 import pages from './pages';
 
-const pathPrefix = '/empower-your-users/';
+import pkg from '../package.json';
+const pathname = url.parse(pkg.homepage).pathname;
+
+const pathPrefix = `${pathname}/`;
 
 const App = () => (
   <div className="container">
