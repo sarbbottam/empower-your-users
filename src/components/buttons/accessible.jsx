@@ -7,6 +7,9 @@ const Accessible = () => {
 
   return (
     <div className="row-input">
+      <noscript>
+        Buttons are of no use, w/o JavaScript
+      </noscript>
       <ul>
         <li>✅'Surprise me! - button' is reachable via keyboard</li>
         <li>✅'Surprise me! - button' can be activated by pressing `enter` and `space`, similar to clicking</li>
