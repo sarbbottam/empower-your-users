@@ -607,12 +607,12 @@ li{
 }
 .container{
   margin:0 auto;
-  padding:28px 0 40px;
-  width:500px;
+  padding:20px;
+  width:800px;
 }
 .container-example{
-    padding-left:20px;
-  }
+  padding-left:20px;
+}
 .heading,
 .sub-heading{
   margin:20px 0 10px;
@@ -635,19 +635,20 @@ li{
 }
 @media screen and (max-width: 568px){
   .container{
-    width:300px;
+    width:100%;
   }
-
   .container-example{
-    padding:0;
+    padding-left:0;
   }
 }
-/*!
- * placeholder for large device specific layout rules
- * @media screen and (--md-device) {
- *   ...
- * }
- */
+@media screen and (max-width: 768px){
+  .container{
+    width:100%;
+  }
+  .container-example{
+    padding-left:0;
+  }
+}
 /*!
  * placeholder for large device specific layout rules
  * @media screen and (--lg-device) {
