@@ -3,7 +3,13 @@ import React from 'react';
 import Match from 'react-router/Match';
 import Link from 'react-router/Link';
 
-import { basePath, pages } from './routes';
+import routes from './routes';
+
+const MatchWithSubRoutes = (route) => (
+  <Match {...route} render={(props) => (
+    <route.component {...props} routes={route.routes}/>
+  )}/>
+)
 
 const App = () => (
   <div className="container">
@@ -12,17 +18,17 @@ const App = () => (
       <div className="col col-1-4 col-sm-1-2 v-a-t">
         <ul>
           {
-            pages.map(page => {
-              return <li key={page.relativePath}><Link to={`${basePath}${page.relativePath}`}>{page.text}</Link></li>
+            routes.map(route => {
+              return <li key={route.pattern}><Link to={route.pattern}>{route.text}</Link></li>
             })
           }
         </ul>
       </div>
       <div className="col col-3-4 col-sm-1-2 v-a-t container-example">
         {
-          pages.map(page => {
-            if (page.component) {
-              return <Match key={page.relativePath} pattern={`${basePath}${page.relativePath}`} component={page.component} />
+          routes.map((route,i) => {
+            if (route.component) {
+              return <MatchWithSubRoutes key={i} {...route}/>
             }
             return '';
           })
