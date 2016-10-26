@@ -1,62 +1,83 @@
-import {Accessible as ButtonAccessible, Inaccessible as ButtonInaccessible} from '../components/buttons';
-import {Accessible as FormAccessible, Inaccessible as FormInaccessible} from '../components/forms';
-import {Accessible as ImageAccessible, Inaccessible as ImageInaccessible} from '../components/images';
-import {Accessible as TableAccessible, Inaccessible as TableInaccessible, Layout as TableLayout} from '../components/tables';
+import Main from '../components/routes/main';
+import {Accessible as ButtonAccessible, Inaccessible as ButtonInaccessible} from '../components/routes/buttons';
+import {Accessible as FormAccessible, Inaccessible as FormInaccessible} from '../components/routes/forms';
+import {Accessible as ImageAccessible, Inaccessible as ImageInaccessible} from '../components/routes/images';
+import {Accessible as TableAccessible, Inaccessible as TableInaccessible, Layout as TableLayout} from '../components/routes/tables';
 
 import url from 'url';
 import pkg from '../../package.json';
 const pathname = url.parse(pkg.homepage).pathname;
 
-export const basePath = `${pathname}/`;
-
-export const pages = [
+const routes = [
   {
     text: 'Home',
-    relativePath: ''
+    pattern: `${pathname}/`
   },
   {
-    component: ButtonAccessible,
-    text: 'Accessible Button',
-    relativePath: 'button-accessible.html'
+    component: Main,
+    text: 'Button',
+    pattern: `${pathname}/button`,
+    routes: [{
+      component: ButtonAccessible,
+      text: 'Accessible Button',
+      pattern: `${pathname}/button/accessible`
+    },
+    {
+      component: ButtonInaccessible,
+      text: 'Inaccessible Button',
+      pattern: `${pathname}/button/inaccessible`
+    }]
   },
   {
-    component: ButtonInaccessible,
-    text: 'Inaccessible Button',
-    relativePath: 'button-inaccessible.html'
+    component: Main,
+    text: 'Form',
+    pattern: `${pathname}/form`,
+    routes: [{
+      component: FormAccessible,
+      text: 'Accessible Form',
+      pattern: `${pathname}/form/accessible`
+    },
+    {
+      component: FormInaccessible,
+      text: 'Inaccessible Form',
+      pattern: `${pathname}/form/inaccessible`
+    }]
   },
   {
-    component: FormAccessible,
-    text: 'Accessible Form',
-    relativePath: 'form-accessible.html'
+    component: Main,
+    text: 'Image',
+    pattern: `${pathname}/image`,
+    routes: [{
+      component: ImageAccessible,
+      text: 'Accessible Image',
+      pattern: `${pathname}/image/accessible`
+    },
+    {
+      component: ImageInaccessible,
+      text: 'Inaccessible Image',
+      pattern: `${pathname}/image/inaccessible`
+    }]
   },
   {
-    component: FormInaccessible,
-    text: 'Inaccessible Form',
-    relativePath: 'form-inaccessible.html'
-  },
-  {
-    component: ImageAccessible,
-    text: 'Accessible Image',
-    relativePath: 'image-accessible.html'
-  },
-  {
-    component: ImageInaccessible,
-    text: 'Inaccessible Image',
-    relativePath: 'image-inaccessible.html'
-  },
-  {
-    component: TableAccessible,
-    text: 'Accessible Table',
-    relativePath: 'table-accessible.html'
-  },
-  {
-    component: TableInaccessible,
-    text: 'Inaccessible Table',
-    relativePath: 'table-inaccessible.html'
-  },
-  {
-    component: TableLayout,
-    text: 'Table layout',
-    relativePath: 'table-layout.html'
+    component: Main,
+    text: 'Table',
+    pattern: `${pathname}/table`,
+    routes: [{
+      component: TableAccessible,
+      text: 'Accessible Table',
+      pattern: `${pathname}/table/accessible`
+    },
+    {
+      component: TableInaccessible,
+      text: 'Inaccessible Table',
+      pattern: `${pathname}/table/inaccessible`
+    },
+    {
+      component: TableLayout,
+      text: 'Table layout',
+      pattern: `${pathname}/table/layout`
+    }]
   }
 ];
+
+export default routes;
