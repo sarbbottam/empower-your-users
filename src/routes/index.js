@@ -3,6 +3,7 @@ import {Accessible as ButtonAccessible, Inaccessible as ButtonInaccessible} from
 import {Accessible as FormAccessible, Inaccessible as FormInaccessible} from '../components/routes/forms';
 import {Accessible as ImageAccessible, Inaccessible as ImageInaccessible} from '../components/routes/images';
 import {Accessible as TableAccessible, Inaccessible as TableInaccessible, Layout as TableLayout} from '../components/routes/tables';
+import Tab from '../components/routes/tab';
 
 import url from 'url';
 import pkg from '../../package.json';
@@ -77,7 +78,13 @@ const routes = [
       text: 'Table layout',
       pattern: `${pathname}/table/layout`
     }]
+  },
+  {
+    component: Tab,
+    text: 'Tab',
+    pattern: `${pathname}/tab`
   }
+
 ];
 
 export default routes;

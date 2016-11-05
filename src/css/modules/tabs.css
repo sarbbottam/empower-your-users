@@ -1,0 +1,30 @@
+.tabs {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  height: 64px;
+}
+
+.tabs a {
+  text-decoration: none;
+}
+
+.tabs li {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eee;
+}
+
+.active-tab {
+  background: #fff !important;
+}
+
+.active-panel {
+  display: block !important;
+}
+
+.panel {
+  display: none;
+}
