@@ -1,6 +1,6 @@
 import React from 'react';
 import states from '../../../model/states';
-import {Input, Select} from '../../form-fields';
+import {Input, Select} from '../../core/form-fields';
 
 const Inaccessible = () => {
   return (
