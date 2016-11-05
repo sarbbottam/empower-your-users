@@ -708,6 +708,38 @@ td{
 .card:hover{
   box-shadow:2px 2px 2px #444, -2px 2px 2px #444;
 }
+.tabs{
+  display:-ms-flexbox;
+  display:flex;
+  -ms-flex-align:stretch;
+      align-items:stretch;
+  -ms-flex-pack:center;
+      justify-content:center;
+  height:64px;
+}
+.tabs a{
+  text-decoration:none;
+}
+.tabs li{
+  -ms-flex-positive:1;
+      flex-grow:1;
+  display:-ms-flexbox;
+  display:flex;
+  -ms-flex-align:center;
+      align-items:center;
+  -ms-flex-pack:center;
+      justify-content:center;
+  background:#eee;
+}
+.active-tab{
+  background:#fff !important;
+}
+.active-panel{
+  display:block !important;
+}
+.panel{
+  display:none;
+}
 .m-b-20px{
   margin-bottom:20px;
 }
