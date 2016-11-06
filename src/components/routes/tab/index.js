@@ -41,8 +41,14 @@ class Tab extends React.Component {
           {
             tabs.map( (tab, i) => {
               return (
-                <li key={i} className={i === selectedIndex ? 'active-tab tab' : 'tab'}>
-                  <a href={`#${tab.id}`} aria-expanded={i === selectedIndex ? 'true' : 'false'} data-id={i}>{tab.name}</a>
+                <li key={i} className={i === selectedIndex ? 'active-tab' : ''}>
+                  {
+                    typeof document !== 'undefined' ?
+                    <a href={`#${tab.id}`} aria-expanded={i === selectedIndex ? 'true' : 'false'} data-id={i}>{tab.name}</a>
+                    :
+                    <a href={`#${tab.id}`} data-id={i}>{tab.name}</a>
+                  }
+
                 </li>
               )
             })

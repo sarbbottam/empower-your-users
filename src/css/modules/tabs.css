@@ -1,15 +1,15 @@
-.tabs {
+.js .tabs {
   display: flex;
   align-items: stretch;
   justify-content: center;
   height: 64px;
 }
 
-.tabs a {
+.js .tabs a {
   text-decoration: none;
 }
 
-.tabs li {
+.js .tabs li {
   flex-grow: 1;
   display: flex;
   align-items: center;
@@ -17,14 +17,14 @@
   background: #eee;
 }
 
-.active-tab {
+.js .active-tab {
   background: #fff !important;
 }
 
-.active-panel {
+.js .active-panel {
   display: block !important;
 }
 
-.panel {
+.js .panel {
   display: none;
 }
