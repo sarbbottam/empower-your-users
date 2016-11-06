@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import tabs from '../../../model/tabs.js'
 
 class Tab extends React.Component {
@@ -22,6 +23,13 @@ class Tab extends React.Component {
       return tabs.indexOf(selectedTab);
     }
     return 0;
+  }
+
+  componentDidUpdate() {
+    const activeLink = ReactDOM.findDOMNode(this).querySelector(`[href="${document.location.hash}"]`);
+    setTimeout(() => {
+      activeLink.focus();
+    }, 0);
   }
 
   render() {
