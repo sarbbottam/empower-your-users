@@ -708,7 +708,7 @@ td{
 .card:hover{
   box-shadow:2px 2px 2px #444, -2px 2px 2px #444;
 }
-.tabs{
+.js .tabs{
   display:-ms-flexbox;
   display:flex;
   -ms-flex-align:stretch;
@@ -717,10 +717,10 @@ td{
       justify-content:center;
   height:64px;
 }
-.tabs a{
+.js .tabs a{
   text-decoration:none;
 }
-.tabs li{
+.js .tabs li{
   -ms-flex-positive:1;
       flex-grow:1;
   display:-ms-flexbox;
@@ -731,13 +731,13 @@ td{
       justify-content:center;
   background:#eee;
 }
-.active-tab{
+.js .active-tab{
   background:#fff !important;
 }
-.active-panel{
+.js .active-panel{
   display:block !important;
 }
-.panel{
+.js .panel{
   display:none;
 }
 .m-b-20px{

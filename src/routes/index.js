@@ -3,7 +3,7 @@ import {Accessible as ButtonAccessible, Inaccessible as ButtonInaccessible} from
 import {Accessible as FormAccessible, Inaccessible as FormInaccessible} from '../components/routes/forms';
 import {Accessible as ImageAccessible, Inaccessible as ImageInaccessible} from '../components/routes/images';
 import {Accessible as TableAccessible, Inaccessible as TableInaccessible, Layout as TableLayout} from '../components/routes/tables';
-import Tab from '../components/routes/tab';
+import {JumpLinkTab as Tab} from '../components/routes/tab';
 
 import url from 'url';
 import pkg from '../../package.json';
