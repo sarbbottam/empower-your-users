@@ -740,6 +740,9 @@ td{
 .js .panel{
   display:none;
 }
+.js .panel:focus{
+  outline:0;
+}
 .m-b-20px{
   margin-bottom:20px;
 }

@@ -18,10 +18,10 @@ class JumpLinks extends React.Component {
   }
 
   componentDidUpdate() {
-    const activeLink = ReactDOM.findDOMNode(this).querySelector(`[href="${document.location.hash}"]`);
-    if (activeLink) {
+    const activePanel = ReactDOM.findDOMNode(this).querySelector(`#${document.location.hash.substr(1)}`);
+    if (activePanel) {
       setTimeout(() => {
-        activeLink.focus();
+        activePanel.focus();
       }, 0);
     }
   }
@@ -51,7 +51,7 @@ class JumpLinks extends React.Component {
           {
             tabs.map((tab, i) => {
               return (
-                <li id={tab.id} className={i === selectedIndex ? 'active-panel panel' : 'panel'} key={i}>
+                <li tabIndex="-1" id={tab.id} className={i === selectedIndex ? 'active-panel panel' : 'panel'} key={i}>
                   {tab.content}
                 </li>
               )

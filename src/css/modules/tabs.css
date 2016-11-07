@@ -28,3 +28,7 @@
 .js .panel {
   display: none;
 }
+
+.js .panel:focus {
+  outline: 0;
+}
